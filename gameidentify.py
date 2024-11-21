@@ -9,12 +9,12 @@ import pandas as pd
 # OpenAI API key setup
 OpenAI.api_key = 'sk-XGQ6l3gk32AVhaJiuAh-exnHT6Wr2zWOcQZ1J7HuwFT3BlbkFJj34e_k_-i61ie7QlnybQGjFcCzlpAN5ospFDkUrO8A'
 
-file_path = r"C:\Users\theal\MakersFund\MakersFundraising\combined_staff_data_with_games.xlsx"
+file_path = r"C:\Users\theal\MakersFund\MakersFundraising\MakersFundraising\combined_staff_data_with_games.xlsx"
 df = pd.read_excel(file_path)
 df['games'] = None  # Add a new column 'games' with default value None
 
 # For Testing
-# df = df.head(10)
+df = df.head(10)
 
 
 i = 0
@@ -46,7 +46,7 @@ for index, row in df.iterrows():
     df.at[index, 'games'] = processed_value
 
 
-df.to_excel("updated_staff_data_with_games.xlsx", index=False)
+df.to_excel("updated_staff_data_with_games_test2.xlsx", index=False)
 
 
 
